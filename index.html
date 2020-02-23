@@ -128,7 +128,7 @@
   <body>
     <br>
     <center>
-    <span style="font-size:42px">Learning Category-Specific Mesh Reconstruction <br> from Image Collections</span>
+    <span style="font-size:42px">Learning Navigation Cost from Demonstration in Partially Observable Environments</span>
     
     </center>
 
@@ -137,27 +137,22 @@
        <tr>
          <td align=center width=100px>
          <center>
-         <span style="font-size:20px"><a href="http://www.eecs.berkeley.edu/~kanazawa/">Angjoo Kanazawa<sup>*</sup></a></span>
+         <span style="font-size:20px"><a href="https://tianyudwang.github.io/">Tianyu Wang</a></span>
          </center>
          </td>
 
         <td align=center width=100px>
         <center>
-        <span style="font-size:20px"><a href="https://shubhtuls.github.io/">Shubham Tulsiani<sup>*</sup></a></span>
+        <span style="font-size:20px"><a href="http://www-personal.umich.edu/~dhiman/">Vikas Dhiman</a></span>
         </center>
         </td>
 
         <td align=center width=100px>
         <center>
-        <span style="font-size:20px"><a href="http://www.eecs.berkeley.edu/~efros/">Alexei A. Efros</a></span>
+        <span style="font-size:20px"><a href="https://natanaso.github.io/">Nikolay Atanasov</a></span>
         </center>
         </td>
 
-        <td align=center width=100px>
-        <center>
-        <span style="font-size:20px"><a href="http://www.eecs.berkeley.edu/~malik/">Jitendra Malik</a></span>
-        </center>
-        </td>
      </tr>
     </table>
 
@@ -165,7 +160,7 @@
        <tr>
         <td align=center width=100px>
         <center>
-        <span style="font-size:20px">University of California, Berkeley<br/>In ECCV, 2018</span>
+        <span style="font-size:20px">University of California, San Diego<br/>In ICRA, 2020</span>
         </center>
         </td>
      </tr>
@@ -180,18 +175,7 @@
        </center>
        </td>
 
-      <td align=center width=100px>
-      <center>
-      <span style="font-size:20px"><a href="https://youtu.be/cYHQKtBLI3Q">[Video]</a></span>
-      </center>
-      </td>
-       
-      <td align=center width=100px>
-      <center>
-      <span style="font-size:20px"><a href="https://github.com/akanazawa/cmr">[Code]</a></span>
-      </center>
-      </td>
-      
+
    </tr>
   </table>
 
@@ -214,7 +198,26 @@
             </table>
 
             <br>
-            We present a learning framework for recovering the 3D shape, camera, and texture of an object from a single image. The shape is represented as a deformable 3D mesh model of an object category where a shape is parameterized by a learned mean shape and per-instance predicted deformation. Our approach allows leveraging an annotated image collection for training, where the deformable model and the 3D prediction mechanism are learned without relying on ground-truth 3D or multi-view supervision. Our representation enables us to go beyond existing 3D prediction approaches by  incorporating texture inference as prediction of an image in a canonical appearance space. Additionally, we show that semantic keypoints can be easily associated with the predicted shapes. We present qualitative and quantitative results of our approach on the CUB dataset, and show that we can learn to predict the diverse shapes and textures across birds using only an annotated image collection. We also demonstrate the the applicability of our method for learning the 3D structure of other generic categories.
+            This paper focuses on inverse reinforcement learning (IRL) to enable safe and
+            efficient autonomous navigation in unknown partially observable environments.
+            The objective is to infer a cost function that explains expert-demonstrated
+            navigation behavior while relying only on the observations and state-control
+            trajectory used by the expert.
+            We develop a cost function representation composed of two parts: a probabilistic
+            occupancy encoder, with recurrent dependence on the observation sequence, and a
+            cost encoder, defined over the occupancy features.
+            The representation parameters are optimized by differentiating the error between 
+            demonstrated controls and a control policy computed from the cost encoder.
+            Such differentiation is typically computed by dynamic programming through 
+            the value function over the whole state space.
+            We observe that this is inefficient in large partially observable environments
+            because most states are unexplored.
+            Instead, we rely on a closed-form subgradient of the cost-to-go obtained only
+            over a subset of promising states via an efficient motion-planning algorithm
+            such as A* or RRT.
+            Our experiments show that our model exceeds the accuracy of baseline IRL algorithms in 
+            robot navigation tasks, while substantially improving the efficiency of training 
+            and test-time inference.
             <br><br>
           <hr>
          <!-- <table align=center width=550px> -->

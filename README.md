@@ -1,12 +1,12 @@
-# Learning Category-Specific Mesh Reconstruction from Image Collections
+# Learning Navigation Cost from Demonstration in Partially Observable Environments
 
-Angjoo Kanazawa<sup>\*</sup>, Shubham Tulsiani<sup>\*</sup>, Alexei A. Efros, Jitendra Malik
+Tianyu Wang, Vikas Dhiman, Nikolay Atanasov
 
-In ECCV, 2018
+In ICRA, 2020
 
-University of California, Berkeley
+University of California, San Diego
 
-[Project Page](https://akanazawa.github.io/cmr/)
+[Project Page](https://tianyudwang.github.io/lnc/)
 
-![Teaser Image](https://akanazawa.github.io/cmr/resources/images/teaser.png)
+
 
